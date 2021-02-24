@@ -184,3 +184,6 @@ Finalmente, volvemos a cargar la página de la BBDD y comprobamos que se han ins
 ## Requerimiento 2 ##
 
 CDN es una forma habitual de separar el contenido estático de una aplicación web Consiste en ubicarlo en un servidor virtual que se puede replicar para que cada usuario descargue ese contenido del servidor más cercano a su ubicación La aplicación espera que exista un recurso "jndi/CDN" que apunte a la dirección web donde se han subido los ficheros estáticos se deberá crear ese servidor virtual y el recurso correspondiente en el Servidor de Aplicaciones.
+
+![enunciado2](Imagenes/Enunciado2.png)
+
