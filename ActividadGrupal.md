@@ -139,4 +139,48 @@ Una vez hemos accedido, procedemos a modificar el contenido como se indica en lo
 
 ![comando15](Imagenes/comando15.png)
 
-**Séptimo:** Cuando ya tengamos modificado el archivo context.xml, lo que hacemos a continuación, es descargar el driver del conector. Para ello, nos dirigimos a la página facilitada por el profesor "https://mvnrepository.com/artifact/mysql/mysql-connector-java" y lo descargamos  
+Guardamos el archivo pulsando ^x  y volvemos a restablecer el tomcat con el comando “systemctl tomcat9 restart”. Una vez lo hayamos reseteado, volvemos a acceder a la BBDD
+
+![coma16](Imagenes/coma16.png)
+
+**Séptimo** Nos encontramos con el problema de que no podemos acceder. Para solucionar este inconveniente, tenemos que descargarnos el conector de mysql. Para ello, nos dirigimos a: **https://mvnrepository.com/artifact/mysql/mysql-connector-java** y descargamos el que sea acorde a nuestro mysql. 
+
+![comando16](Imagenes/comando16.png)
+
+Una vez lo hayamos descargado, tenemos que llevar el archivo a la librería del tomcat. Cuando lo hayamos pegado en dicha carpeta, procedemos a extraerlo en la misma. 
+
+![comando17](Imagenes/comando17.png)
+
+
+**Nota:** Si vemos que no conecta la BBDD, tenemos que volver a resetear el servidor y comprobar que tenemos los puertos abiertos en el firewall 
+
+![comando24](Imagenes/comando24.png)
+
+**Octavo:** Volvemos a acceder a la BBDD y vemos como ya sí que se visualiza correctamente
+
+![comando18](Imagenes/comando18.png)
+
+Por último, podemos insertar datos bien utilizando el entorno gráfico que nos aparece en el localhost o bien por comandos. El uso del comando se procesa de la siguiente estructura:
+
+	- Insert into Table (atributo) values (valor);
+
+**Ejemplo:**
+![comando19](Imagenes/comando19.png)
+
+**Nota:** Podemos hacerlo mediante entorno gráfico también a través de workbench (o cualquier otra base de datos) primero tenemos que asegurarnos que establece la conexión perfectamente usando nuestro usuario y contraseña:
+
+![comando20](Imagenes/comando20.png)
+
+**Noveno:** Insertamos los campos como se indica en el enunciado
+![comando22](Imagenes/comando22.png)
+
+![comando21](Imagenes/comando21.png)
+
+Finalmente, volvemos a cargar la página de la BBDD y comprobamos que se han insertado correctamente los campos:
+
+![comando25](Imagenes/comando25.png)
+
+
+## Requerimiento 2 ##
+
+CDN es una forma habitual de separar el contenido estático de una aplicación web Consiste en ubicarlo en un servidor virtual que se puede replicar para que cada usuario descargue ese contenido del servidor más cercano a su ubicación La aplicación espera que exista un recurso "jndi/CDN" que apunte a la dirección web donde se han subido los ficheros estáticos se deberá crear ese servidor virtual y el recurso correspondiente en el Servidor de Aplicaciones.
