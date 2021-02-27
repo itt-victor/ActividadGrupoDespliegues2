@@ -187,3 +187,35 @@ CDN es una forma habitual de separar el contenido estático de una aplicación w
 
 ![enunciado2](Imagenes/Enunciado2.png)
 
+Para realizar la actividad tenemos que tener instalado apache, para eso tendremos que poner en el la consola “sudo apt install apache2”
+
+![apache](ImagenesCDN/Apache.PNG)
+
+Luego nos metemos en el github de la actividad para descargarnos tanto el war. Como el zip con el contenido CDN.
+
+![descarga](ImagenesCDN/Descarga.PNG)
+
+
+Para conectar el tomcat con el apache iremos a la carpeta “var/lib/tomcat9” y nos metemos en el context.xml , añadiendo al mismo el Environment con un name, value y type cambiados
+
+![gitdescarga](ImagenesCDN/Conf.PNG)
+
+Para alojar el zip descargados nos vamos a la carpeta “var/ww/html”
+
+![carp](ImagenesCDN/C1.PNG)
+
+
+Y pegamos el contenido:
+
+![carp1](ImagenesCDN/C2.PNG)
+
+Después de hacer estos pasos probamos que todo este funcionando,
+
+![app](ImagenesCDN/app.PNG)
+
+Y vemos el resultado:
+
+![okok](ImagenesCDN/OKOK.PNG)
+
+
+
