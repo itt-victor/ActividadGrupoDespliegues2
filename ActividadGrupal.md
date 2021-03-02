@@ -220,9 +220,68 @@ Y vemos el resultado:
 
 ## Requerimiento 3 - FTP ##
 
-![1](ImagenesFTP/1.PNG)
+![1](ImagenesFTP/1.png)
 
-Para la configuración del servidor FTP vamos a utilizar vsftpd. En primer lugar, lo instalamos mediante “apt install”:
+Para la configuración del servidor FTP vamos a utilizar vsftpd. En primer lugar, lo instalamos mediante “apt install”: 
 
-![2](ImagenesFTP/2.PNG)
+![2](ImagenesFTP/2.png)
+
+Una vez instalado, aseguramos que tenemos abierto el puerto 21, por el que se ejecutará nuestro servidor:
+
+![3](ImagenesFTP/3.png)
+
+
+Configuramos el servidor FTP para que cumpla con lo solicitado en la práctica. Accedemos al fichero vsftpd.conf mediante el comando nano:
+
+![4](ImagenesFTP/4.png)
+
+Por un lado, “descomentaremos” las opciones vistas en clase para que los usuarios solo puedan compartir vía FTP su directorio /home/:
+
+![5](ImagenesFTP/5.png)
+
+Cabe destacar que para permitir que el usuario “administrador” pueda tener permiso de escritura, se debió de incorporar la instrucción “allow_writeable_chroot=YES”, en caso contrario el servidor no dejaba logarse con dicho usuario: 
+
+![6](ImagenesFTP/6.png)
+
+
+Crearemos el usuario “registrado”, que incluiremos en la lista antes mencionada: 
+
+![7](ImagenesFTP/7.png)
+
+Creamos el fichero:
+
+![8](ImagenesFTP/8.png)
+
+Introducimos al usuario “registrado”:
+
+![9](ImagenesFTP/9.png)
+
+Generamos el usuario “administrador” del mismo modo, así como lo incorporamos a la lista anterior, y añadimos el siguiente comando para que su carpeta home corresponda con la que se compartirá vía FTP: 
+
+![10](ImagenesFTP/10.png)
+
+Posteriormente se crea un grupo “FTP”, donde introduciremos ambos usuarios; de este modo el usuario “registrado” tendrá acceso de lectura y ejecución, pero no de escritura. Asimismo, nos aseguramos que la carpeta a compartir tiene asignado el grupo creado:
+
+![11](ImagenesFTP/11.png)
+
+
+Generamos la variable en el fichero context.xml. Es interesante observar que, si se introducía el puerto o el usuario, la aplicación no funciona correctamente: 
+
+![12](ImagenesFTP/12.png)
+
+Tras esto, el servidor FTP ya habría quedado configurado para su uso con la aplicación facilitada, como último paso, introducimos los recursos requeridos dentro del directorio. 
+NOTA IMPORTANTE: observando el código del .war adjunto, hemos determinado que este predefinía que el usuario debe es siempre “registrado”, motivo por el cual no permite adjuntar archivos desde la aplicación (ya que ese usuario ha sido configurado conforme no dispone de permisos de escritura): 
+
+![13](ImagenesFTP/13.png)
+
+Finalmente, hemos logrado que los ficheros de configuración de la propia aplicación web se encuentren disponibles en la carpeta habilitada en el servidor FTP (faltando únicamente este manual que será incorporado a su finalización:
+
+
+![14](ImagenesFTP/14.png)
+
+Si solicitamos un fichero, este aparece en el navegador (en este caso, el listado de usuarios que han sido limitados a su carpeta home):
+
+![15](ImagenesFTP/16.png)
+
+![16](ImagenesFTP/16.png)
 
