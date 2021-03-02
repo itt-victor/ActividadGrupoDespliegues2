@@ -281,7 +281,7 @@ Finalmente, hemos logrado que los ficheros de configuración de la propia aplica
 
 Si solicitamos un fichero, este aparece en el navegador (en este caso, el listado de usuarios que han sido limitados a su carpeta home):
 
-![15](ImagenesFTP/16.png)
+![15](ImagenesFTP/15.png)
 
 ![16](ImagenesFTP/16.png)
 
