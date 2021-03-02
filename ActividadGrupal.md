@@ -2,7 +2,7 @@
 
 # Enunciado #
 
-## Requerimiento 1 ##
+## Requerimiento 1 - Base de datos ##
 
 ![enunciado1](Imagenes/Enunciado1.png)
 
@@ -181,7 +181,7 @@ Finalmente, volvemos a cargar la página de la BBDD y comprobamos que se han ins
 ![comando25](Imagenes/comando25.png)
 
 
-## Requerimiento 2 ##
+## Requerimiento 2 - Apache CDN ##
 
 CDN es una forma habitual de separar el contenido estático de una aplicación web Consiste en ubicarlo en un servidor virtual que se puede replicar para que cada usuario descargue ese contenido del servidor más cercano a su ubicación La aplicación espera que exista un recurso "jndi/CDN" que apunte a la dirección web donde se han subido los ficheros estáticos se deberá crear ese servidor virtual y el recurso correspondiente en el Servidor de Aplicaciones.
 
@@ -218,4 +218,11 @@ Y vemos el resultado:
 ![okok](ImagenesCDN/OKOK.PNG)
 
 
+## Requerimiento 3 - FTP ##
+
+![1](ImagenesFTP/1.PNG)
+
+Para la configuración del servidor FTP vamos a utilizar vsftpd. En primer lugar, lo instalamos mediante “apt install”:
+
+![2](ImagenesFTP/2.PNG)
 
